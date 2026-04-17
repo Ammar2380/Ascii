@@ -1,0 +1,6 @@
+{
+  "name": "ASCII PRO - Sophisticated Dark",
+  "description": "A refined, editorial-grade ASCII art studio for the digital curator.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["AI Integration", "Real-time Video Processing"]
+}

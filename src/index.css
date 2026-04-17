@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Share Tech Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Orbitron", sans-serif;
+  --font-serif: "Georgia", serif;
+  
+  --color-soph-bg: #050505;
+  --color-soph-surface: #0f0f0f;
+  --color-soph-border: rgba(255, 255, 255, 0.12);
+  --color-soph-accent: #ffffff;
+  --color-soph-text-main: #e0e0e0;
+  --color-soph-text-dim: #808080;
+}
+
+@layer base {
+  body {
+    @apply bg-soph-bg text-soph-text-main font-sans overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .panel-border {
+    @apply border border-soph-border bg-soph-bg;
+  }
+  
+  .cyber-button {
+    @apply px-4 py-2 border border-soph-border bg-transparent text-soph-text-main hover:border-soph-accent hover:bg-white/5 transition-all uppercase tracking-[0.1em] text-[10px] disabled:opacity-30;
+  }
+  
+  .btn-primary {
+    @apply bg-soph-accent text-soph-bg border-soph-accent font-semibold;
+  }
+
+  .label-micro {
+    @apply text-[10px] uppercase tracking-[0.2em] text-soph-text-dim mb-3 block;
+  }
+  
+  .prompt-box {
+    @apply bg-soph-surface border border-soph-border p-4 text-[13px] leading-relaxed text-soph-text-main font-serif italic;
+  }
+}
+
+/* Custom range slider styling for Sophisticated Dark */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: var(--color-soph-accent);
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  background: var(--color-soph-border);
+}
+
